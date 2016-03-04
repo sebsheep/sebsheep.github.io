@@ -91,17 +91,17 @@
 		width: 150px;
 	}
 	
-	header hgroup {
+	header div div {
 		float: left;
 		padding: 42px 0;
 	}
 	
-	header hgroup h1 {
+	header h1 {
 		color:#555;
 		font-family:'DroidSansBold', Arial, sans-serif;
 	}
 	
-	header hgroup h2 {
+	header  h2 {
 		color:#cecece;
 		font-style: italic;
 		text-shadow: 1px 1px 0 rgba(0,0,0,.3);
