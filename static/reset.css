@@ -77,24 +77,12 @@ table {
 
 /* Font-Face : déclaration de la police de caractères */
 @font-face {
-    font-family: 'DroidSansRegular';
-    src: url('../font/DroidSans-webfont.eot');
-    src: url('../font/DroidSans-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/DroidSans-webfont.woff') format('woff'),
-         url('../font/DroidSans-webfont.ttf') format('truetype'),
-         url('../font/DroidSans-webfont.svg#DroidSansRegular') format('svg');
     font-weight: normal;
     font-style: normal;
 
 }
 
 @font-face {
-    font-family: 'DroidSansBold';
-    src: url('../font/DroidSans-Bold-webfont.eot');
-    src: url('../font/DroidSans-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../font/DroidSans-Bold-webfont.woff') format('woff'),
-         url('../font/DroidSans-Bold-webfont.ttf') format('truetype'),
-         url('../font/DroidSans-Bold-webfont.svg#DroidSansBold') format('svg');
     font-weight: normal;
     font-style: normal;
 

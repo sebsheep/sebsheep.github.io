@@ -132,7 +132,7 @@
 		text-align: right;
 	}
 
-	section[role=main] .competences h4 + * {
+	.barres {
 		margin-top: -10px;
 	}
 
@@ -203,6 +203,15 @@
 		padding: 3px;
 		font-size: 80%;
 	}
+	.big-tags li {
+		background-color:#33a4c9;
+		border:1px solid #1b91b7;
+		color:#fff;
+		display: inline-block;
+		line-height: 13px;
+		margin: 0 3px 3px 0;
+		padding: 5px; 
+	}
 	
 	/************************************************
 	/* Affichage des compétences sous forme de barres
@@ -260,3 +269,38 @@ ul.origin {
    padding: 0 0 0  20px;
    margin-top: 5px;
 }
+body{
+overflow-x: hidden;
+}
+.menu {
+	border: 1px solid grey;
+	border-left: 8px solid #ff8000;
+	position: fixed;
+	top: 5px;
+	left: 100%;
+	background-color: white;
+	border-radius: 3px;
+	margin-left: -8px;
+	z-index: 10;
+	font-size: 80%;
+	padding-left: 2px;
+}
+
+.menu li {
+	margin-bottom: 4px;
+	line-height: 95%;
+}
+
+.menu li:first-child{
+	margin-top: 4px;
+}
+
+.menu li:last-child {
+	padding-bottom: 0px;
+}
+
+.menu li:first-letter{
+	font-size: 120%;
+
+}
+

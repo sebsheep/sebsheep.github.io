@@ -42,10 +42,11 @@
 	<section role="main" class="container_16 clearfix">
 		<div class="grid_16">
 			<!-- A propos -->
-			<div class="grid_8 apropos">
+			<div class="grid_8 apropos in-menu" id="a-propos">
 				<h3>À propos</h3>
-				<p>Je suis intéressé par le développement d'applications incluant des défis techniques et/ou technologiques.
-				Je suis spécialisé en cryptographie (master), cependant je suis attiré par tous les sujets
+				<p>Je suis intéressé par le développement d'applications incluant des défis techniques et/ou technologiques. Je parle couramment plusieurs langages, aime en apprendre d'autres puis
+				les faire communiquer ensemble, en particulier dans un contexte de programmation web.<br/>
+				Ma formation académique porte sur les mathématiques et plus précisément la cryptographie (spécialisation en master) ; je suis donc attiré par tous les sujets
 				ayant trait aux "mathématiques appliquées".</p>
 
 				<p>Les maths et l'informatique ne sont pas mes seules activités : j'ai dirigé des colonies de vacances
@@ -57,7 +58,7 @@
 			</div>
 			
 			<!-- Compétences -->
-			<div class="grid_8 competences">
+			<div class="grid_8 competences in-menu" id="competences">
 				<h3>Compétences</h3>
 				<h4>Langages</h4>
 				<ul class="barres barres-blue">
@@ -73,11 +74,18 @@
 					<li data-skills="30">Node.js/Express<span style="width: 30%;"></span></li>
 					<li data-skills="30">Silex (micro-framework issu de Symfony)<span style="width: 30%;"></span></li>
 				</ul>
+				<h4>J'aimerais apprendre/approfondir/explorer</h4>
+				<ul class="big-tags">
+					<li>React</li>
+					<li>Node.js</li>
+					<li>GraphQL</li>
+					<li>Machine learning</li>
+				</ul>
 			</div>
 		</div>
 		
 			<!-- Expériences -->
-			<div class="grid_16 experiences">
+			<div class="grid_16 experiences in-menu" id="experiences">
 				<h3>Expériences</h3>
 				<div class="clearfix">
 					<div class="grid_6">
@@ -118,9 +126,9 @@
 					</div>
 					<div class="grid_10">
 							<p>
-								<b>Janvier 2015 - Août 2015 (temps complet)</b> : professeur de mathématiques en 1ère année de Classe Préparatoire aux Grandes Écoles (CPGE), filière "Physique-Chimie-Sciences de l'ingénieur" (PCSI).
+								<b>Janvier - Août 2015 (temps complet)</b> : professeur de mathématiques en 1ère année de Classe Préparatoire aux Grandes Écoles (CPGE), filière "Physique-Chimie-Sciences de l'ingénieur" (PCSI).
 								<br/>
-								<b>Septembre 2014 - Décembre 2014 (3 heures/semaine)</b>: cours d'informatique (Python) en 2ème année de CPGE, filière "Maths-Physique" (MP).
+								<b>Septembre - Décembre 2014 (3 heures/semaine)</b>: cours d'informatique (Python) en 2ème année de CPGE, filière "Maths-Physique" (MP).
 								<br/>
 								<b>Septembre 2012 - Décembre 2014</b> : classes générales et technologiques du lycée.
 							</p>
@@ -153,7 +161,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="grid_16">
+			<div class="grid_16 experiences in-menu" id="apps">
 					<h3>Applications développées</h3>
 					<div class="clearfix">
 						<div class="grid_6">
@@ -259,7 +267,7 @@
 			</div>
 			
 			<!-- Formation -->
-			<div class="grid_16 formations">
+			<div class="grid_16 formations in-menu" id="formation">
 				<h3>Formation</h3>
 				<div class="clearfix">
 					<div class="grid_6">
@@ -291,7 +299,7 @@
 				</div>
 			</div>
 			<!-- Loisirs -->
-			<div class="grid_8 loisirs">
+			<div class="grid_8 loisirs in-menu" id="loisirs">
 				<h3>Musique</h3>
 				<ul class="origin">
 				 <li>guitare (depuis 1994), </li>
@@ -303,7 +311,7 @@
 			</div>
 		
 			<!-- Contact -->
-			<div class="grid_8 contact">
+			<div class="grid_8 contact in-menu" id="contact">
 				<h3>Contact</h3>
 				<p>Si mon profil vous intéresse, n'hésitez pas à me contacter :</p>
 				<ul>
@@ -320,6 +328,8 @@
 <![endif]-->
 <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.1.min.js"></script>
 <script>
+
+// "Lire plus" / "Lire moins" gadget
 var nodes = $('.read-moreable');
 
 function toogle(node){
@@ -335,14 +345,53 @@ function toogle(node){
 	});
 }
 				
-nodes.each(function(i, node){
-	$(node).parent().append(
+nodes.each(function(){
+	$(this).parent().append(
 		$("<p><i class='readmoreless' style='cursor: pointer;' >Lire plus</i></p>")
-		.on('click', toogle(node))
+		.on('click', toogle(this))
 	);
-	$(node).attr('height', $(node).height() + '');
+	$(this).attr('height', $(this).height() + '');
 });
 nodes.css('height', '0px');
 nodes.css('overflow', 'hidden');
+
+// Construction du menu rapide
+
+var menu = $("<ul class=menu>");
+$(".in-menu").each(function(){
+	menu.append($("<li><a href='#" + $(this).attr('id') + "'>" 
+					+ $(this).find('h3').first().text() + "</a></li>"));
+});
+
+
+$("header[role='banner']").append(menu);
+var menu_animation_running = false;
+var menu_folded = true;
+var animation_opts = {
+	duration: 200,
+	complete: function(){
+		menu_animation_running = false;
+	}
+};
+
+function menu_unfold(){
+	if(! menu_animation_running && menu_folded){
+		menu_folded = false;
+		menu_animation_running = true;
+		var width = menu.css('width');
+		width = width.substr(0,width.length -2) |0;
+		menu.animate({"margin-left": (- width -10) + "px"}, animation_opts);
+	}
+}
+
+function menu_fold(){
+	if(!menu_animation_running && ! menu_folded){
+		menu_animation_running = true;
+		menu_folded = true;
+		menu.animate({"margin-left": "-8px"}, animation_opts);
+	}
+}
+menu.on('click mouseenter', menu_unfold);
+menu.on('click mouseleave', menu_fold);
 </script>
 </body></html>
