@@ -299,8 +299,9 @@ overflow-x: hidden;
 	padding-bottom: 0px;
 }
 
-.menu li:first-letter{
-	font-size: 120%;
 
+.langs {
+	position: absolute;
+	left: 10px;
+	top: 5px;
 }
-

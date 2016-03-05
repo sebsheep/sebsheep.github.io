@@ -220,3 +220,23 @@ ul.origin {
 	margin-left: -8px;
 	z-index: 10;
 }
+
+.menu li {
+	margin-bottom: 4px;
+	line-height: 95%;
+}
+
+.menu li:first-child{
+	margin-top: 6px;
+}
+
+.menu li:last-child {
+	padding-bottom: 0px;
+}
+
+
+.langs {
+	position: absolute;
+	right: 15px;
+	top: 5px;
+}
