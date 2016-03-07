@@ -308,3 +308,7 @@ overflow-x: hidden;
 	left: 10px;
 	top: 5px;
 }
+
+.langs a {
+	text-decoration: none;
+}
