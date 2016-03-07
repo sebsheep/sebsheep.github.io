@@ -38,12 +38,7 @@ h3 {
 	margin:30px 0 10px 0;
 }
 
-.competences li {
-	display:inline-block;
-	border-right: 1px solid #ccc;
-	padding-right: 10px;
-	margin-right: 10px;	
-}
+
 
 .contact ul li {
 	list-style: square;
@@ -58,3 +53,90 @@ p {
   orphans: 3; /* pas de ligne seule en bas */
   widows: 3; /* pas de ligne seule en haut */
 }
+
+	section[role=main] .competences h4 {
+		text-align: right;
+	}
+
+	.barres {
+		margin-top: -10px;
+	}
+
+		/**********************************************
+	/* Affichage des compétences sous forme de tags
+	**********************************************/
+	.tags li {
+		background-color:#33a4c9;
+		border:1px solid #1b91b7;
+		color:#fff;
+		display: inline-block;
+		line-height: 13px;
+		margin: 0 3px 3px 0;
+		padding: 3px;
+		font-size: 80%;
+	}
+	.big-tags li {
+		background-color:#33a4c9;
+		border:1px solid #1b91b7;
+		color:#fff;
+		display: inline-block;
+		line-height: 13px;
+		margin: 0 3px 3px 0;
+		padding: 5px; 
+	}
+
+		/************************************************
+	/* Affichage des compétences sous forme de barres
+	*************************************************/
+	.competences .barres li {
+		margin-bottom: 21px;
+		position: relative;
+	}
+	
+	.competences .barres li:after {
+		background: #e1e1e1;
+		bottom: -4px;
+		content: ' ';
+		display: block;
+		height: 5px;
+		position: absolute;
+		width:100%;
+	}
+	
+	.competences .barres li span {
+		bottom: -4px;
+		content: ' ';
+		display: block;
+		height: 5px;
+		left: 0;
+		position: absolute;
+		width: inherit;
+		z-index: 1;
+	}
+	.barres-blue li span {
+		background: #33a4c9;
+	}
+
+	.barres-orange li span {
+		background: #FF8000;
+	}
+
+	.right-aligned {
+	text-align:right;
+}
+
+.no-margins * {
+	margin:0px;
+}
+
+.dates {
+	font-style: italic;
+}
+
+ul.origin { 
+   list-style-type: disc; 
+   list-style-position: inside;
+   padding: 0 0 0  20px;
+   margin-top: 5px;
+}
+	
