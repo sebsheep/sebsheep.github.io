@@ -11,8 +11,6 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/etoolbox/etoolbox.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
-INPUT /usr/share/texlive/texmf-dist/tex/latex/etex-pkg/etex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -21,6 +19,14 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/latexconfig/color.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/xelatex/xetex-def/xetex.def
 INPUT /usr/share/texlive/texmf-dist/tex/xelatex/xetex-def/xetex.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/infwarerr.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ltxcmds.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 INPUT /usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
@@ -58,8 +64,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3-code.tex
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3unicode-data.def
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/UnicodeData.txt
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/CaseFolding.txt
+INPUT /usr/share/texlive/texmf-dist/tex/generic/unicode-data/SpecialCasing.txt
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/l3xdvipdfmx.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/microtype/microtype.sty
@@ -168,6 +175,10 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryplothand
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmodulematrix.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarytopaths.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvheadi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvheadi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvbodyi.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/moderncv/moderncvbodyi.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/marvosym/umvs.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/marvosym/umvs.tfm
