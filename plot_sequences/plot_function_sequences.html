@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>math.js | plot</title>
+  <script src="math.min.js"></script>
+  <meta charset="UTF-8">
+
+  <!-- load http://maurizzzio.github.io/function-plot/ -->
+  <script src="d3.min.js"></script>
+  <script src="function-plot@1.14.0"></script>
+  <script src="nerdamer.core.js"></script>
+  <style>
+    input[type=text] {
+      width: 300px;
+    }
+    input {
+      padding: 6px;
+    }
+    body, html, input {
+      font-family: sans-serif;
+      font-size: 11pt;
+
+    }
+    form {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<form id="form">
+  <label for="eq">Entrez une expression (qui dépend de <i>n</i> et de <i>x</i>):</label>
+  <input type="text" id="eq" value="4 * n*x + 5 * cos(x/2)" />
+  <label for="n_min"> pour n=</label>
+  <input type="number" id="n_min" step="1" value="0"/>
+  <label for="n_max">jusque</label>
+  <input type="number" id="n_max" step="1" value="10"/>
+  <input type="submit" value="Dessiner" />
+</form>
+
+<div id="plot"></div>
+
+<p>
+  Plot library: <a href="https://github.com/maurizzzio/function-plot">https://github.com/maurizzzio/function-plot</a>
+</p>
+
+<script>
+  function draw() {
+    try {
+      var functions = [];
+      
+      for(var n=parseInt(document.getElementById('n_min').value); n <= parseInt(document.getElementById('n_max').value); n++) {
+        var f = nerdamer(document.getElementById('eq').value, {n:n}).text();
+        functions.push({
+          fn: f,
+          sampler: 'builtIn',  // this will make function-plot use the evaluator of math.js
+          graphType: 'polyline'
+        });
+      }
+
+
+      functionPlot({
+        target: '#plot',
+        data: functions
+      });
+    }
+    catch (err) {
+      console.log(err);
+      alert(err);
+    }
+  }
+
+  document.getElementById('form').onsubmit = function (event) {
+    event.preventDefault();
+    draw();
+  };
+
+  draw();
+</script>
+
+</body>
+</html>
