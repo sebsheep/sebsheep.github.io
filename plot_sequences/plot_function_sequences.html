@@ -31,7 +31,7 @@
 
 <form id="form">
   <label for="eq">Entrez une expression (qui dépend de <i>n</i> et de <i>x</i>):</label>
-  <input type="text" id="eq" value="4 * n*x + 5 * cos(x/2)" />
+  <input type="text" id="eq" value="x^n" />
   <label for="n_min"> pour n=</label>
   <input type="number" id="n_min" step="1" value="0"/>
   <label for="n_max">jusque</label>
@@ -46,6 +46,7 @@
 </p>
 
 <script>
+  var COLORS=["steelblue","red","#05b378","orange","#4040e8","yellow","brown","magenta","cyan"];
   function draw() {
     try {
       var functions = [];
@@ -55,11 +56,12 @@
         functions.push({
           fn: f,
           sampler: 'builtIn',  // this will make function-plot use the evaluator of math.js
-          graphType: 'polyline'
+          graphType: 'polyline',
+          color: COLORS[n%COLORS.length]
         });
       }
 
-
+      document.getElementById('plot').innerHTML = '';
       functionPlot({
         target: '#plot',
         data: functions
