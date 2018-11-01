@@ -6009,14 +6009,14 @@ var author$project$Main$updateGrid = F2(
 						A3(
 							elm$core$List$map2,
 							elm$core$Tuple$pair,
-							A2(elm$core$List$range, 1, size),
-							A2(elm$core$List$range, 1, size)),
+							A2(elm$core$List$range, 0, size - 1),
+							A2(elm$core$List$range, 0, size - 1)),
 						A3(
 							elm$core$List$map2,
 							elm$core$Tuple$pair,
-							A2(elm$core$List$range, 1, size),
+							A2(elm$core$List$range, 0, size - 1),
 							elm$core$List$reverse(
-								A2(elm$core$List$range, 1, size)))));
+								A2(elm$core$List$range, 0, size - 1)))));
 				return _Utils_update(
 					grid,
 					{
