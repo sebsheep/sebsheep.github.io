@@ -18,6 +18,17 @@
     <link rel="stylesheet" media="screen and (max-width:480px)" href="static/mobile.css">
     <link rel="stylesheet" media="screen and (min-width:481px)" href="static/cv.css">
     <link rel="stylesheet" media="print" href="static/print.css">
+    <style type="text/css">
+      .read-moreable {
+        max-height: 0;
+        transition:  max-height 200ms linear 0s;
+        overflow: hidden;
+      }
+      .fullheight {
+        max-height: 1000px;
+        transition:  max-height 1000ms;
+      }
+    </style>
   </head>
   <!-- 
     ______   _ _      _ _        _   _                   _ 
@@ -407,13 +418,14 @@
       
       	function toogle(node){
       		return (function(){
-      			if($(node).parent().find('.readmoreless').text() == "Lire plus"){
+            if($(node).parent().find('.readmoreless').text() == "Lire plus"){
+              console.log($(node));
       				$(node).parent().find('.readmoreless').text("Lire moins");
-      				$(node).animate({height: $(node).attr('height')}, 200);
+      				$(node).addClass('fullheight');
       			}
       			else{
       				$(node).parent().find('.readmoreless').text("Lire plus");
-      				$(node).animate({height: '0px'}, 200);
+              $(node).removeClass('fullheight');
       			}
       		});
       	}
@@ -423,10 +435,7 @@
       			$("<p><i class='readmoreless' style='cursor: pointer;' >Lire plus</i></p>")
       			.on('click', toogle(this))
       			);
-      		$(this).attr('height', $(this).height() + '');
       	});
-      	nodes.css('height', '0px');
-      	nodes.css('overflow', 'hidden');
       })();
       
       
