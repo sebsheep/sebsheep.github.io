@@ -1,0 +1,133 @@
+\documentclass[10pt,a4paper]{moderncv}
+\moderncvtheme[blue]{classic}               
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}
+\usepackage[english]{babel}
+\usepackage{tikz}
+\usepackage{url}
+\usepackage{multicol}
+\usetikzlibrary{calc}
+\usetikzlibrary{shapes,snakes}
+\definecolor{color1}{rgb}{0.22,0.45,0.70}% light blue
+\newcommand{\ep}{\tikz{\node[draw=color1,fill=color1,star point ratio=2.5,
+,minimum size=2mm,inner sep = 0pt,star,star points=5] {};}}
+\newcommand{\ec}{\tikz{\node[draw=color1,minimum size=2mm,star point ratio=2.5, inner sep = 0pt,star,star points=5] {};}}
+
+\firstname{\textrm{Sébastien}}
+\familyname{\textsc{Besnier}}
+\title{Computer developer with maths skills}   
+\address{92 avenue du général Leclerc}{91120 Palaiseau, France}       
+\mobile{06 31 72 16 79}                    
+\email{sebastien.fabrice.besnier@gmail.com}
+\homepage{besnier.se}                
+\begin{document}
+\vspace*{-2.5em}
+\maketitle
+
+
+
+
+I am interested in code development, especially when there's technically challenging aspects to it.  For a more detailed version of my resume, see my page: \url{http://besnier.se/en}.
+
+\section{Expériences}
+
+
+\cventry{2015--}{PhD in cryptography}{CEA-LIST}{91120 Palaiseau (France)}{}{My subject is about Physically Unclonable Functions: the main interest is to find a way to build cipher algorithm using the intrinsic variability of the components.}
+
+\cventry{2016}{Tutor in web application conception class}{ISTY}{Université de Versailles (France)}{}{I've taught during practical sessions of the class ''Application Web et Sécurité'' (''Web application and security'') in first year of Computer Science master. See the content of the class:
+\url{http://defeo.lu/aws}.}
+
+\cventry{2012--2015}{Math and computer science teahcer }{Académie de Versailles (France)}{}{}{}
+
+\cventry{2011--}{Child's summer camp direction }{Vitacolo}{}{}{I have been head of 5 children summer camps: staff recruitment, planning, accounting, ...}
+
+\section{Education}
+\cventry{2013--2014}{Master 2 <<Algèbre Appliquée à la Cryptographie
+     et au Calcul Formel>> ("Algebra applied to cryptography and formal calculation") } {Faculté de Versailles (France)}{}{}{
+     Internship: improvement of the isogenies support in Sage.\\ Rank: 2/10.} 
+
+ \cventry{2011--2012}{Agrégation externe de
+     mathématiques}{Computer Science option}{}{}{The \textbf{agrégation de mathématiques} is a selective exam in mathematics allowing to teach in the french system up to about the end of the bachelor's degree (the ''licence'' in the European LMD system) in mathematics.
+\\Rank! 85/ 308.}
+
+
+
+
+\section{Programs}
+
+\cventry{2015--2016 \emph{(in progress)}}{Help desk for summer camp organization}{for Vitacolo}{}{} {Technologies used: Python, Django, twitter-bootstrap, a bit of jquery.}
+
+
+\cventry{2014--2015 \emph{}}{Multi-target compilation}{}{}{}{This project aims to produce (cryptographic) code in several languages (namely C, Java and Python) which behaves exactly in the same manner.See 
+     \url{http://github.com/sebsheep/bbox-julia}.}
+
+\cventry{2015--}{Interactive proof assistant}{}{}{}{The goal of this project is to illustrate to children that a mathematical proof is essentially "mechanic". See the source code \url{http://github.com/sebsheep/poussin} or a live demo: \url{http://poussin-interactif.herokuapp.com/}.}
+
+
+
+\section{Competences}
+
+
+\begin{minipage}{0.35\linewidth}
+  \renewcommand{\arraystretch}{1.5}
+  \begin{tabular}{r@{\quad}l@{\quad~}r@{\quad}l}
+    Python&\ep\ep\ep\ep\ep  &Node.js &\ep\ep\ec\ec\ec\\
+    C/C++&\ep\ep\ep\ec\ec &Haskell&\ep\ep\ep\ec\ec\\
+    Django& \ep\ep\ep\ep\ec & JavaScript &\ep\ep\ec\ec\ec\\
+  \end{tabular}
+
+\end{minipage}
+\begin{minipage}[h!]{0.65\linewidth}
+  \begin{itemize}
+      \item[\color{color1}$\bullet$] Masters theoretical notions in Computer Sciences:
+      complexity, finite state machine/regular expressions, pushdown automaton/grammars,
+      graph theory.
+       
+      \item[\color{color1}$\bullet$] Knowledges on database design.
+      \item[\color{color1}$\bullet$] Linux: basic knowledges in bash.
+  \end{itemize}
+
+\end{minipage}
+
+
+
+
+
+
+
+   
+
+% \cventry{2009--2010}{Licence et Magistère de Mathématiques
+% Fondamentales}{Faculté d'Orsay}{}{}{Mention bien, un module
+% d'informatique théorique. Stage d'un mois dans le laboratoire LLR de
+% l'école Polytechnique (Palaiseau): implémentation d'un filtre de
+% Kalman.}  \cventry{2008--2009}{DEUG de Mathématiques}{Faculté
+% d'Orsay}{}{}{Mention très bien.}
+
+% \subsection{Productions écrites}
+% \vspace{-0.4cm}
+% \begin{center}
+%   \begin{minipage}{0.7\linewidth}
+%     Les documents présentés ici sont principalement des mémoires
+%     réalisés durant mes études à l'université d'Orsay. Ils sont
+%     décrits en détail et accessibles à l'adresse:
+%     http://sebastien.besnier1.free.fr/
+%   \end{minipage}
+% \end{center}
+% \cventry{2012}{Fonctions Elliptiques}{encadré par O. Bouillot}{}{}{}
+% \cventry{2011}{Calcul Variationnel}{encadré par
+% F. Santambrogio}{}{}{} \cventry{2011}{Algorithmique
+% Quantique}{encadré par S. Laplante}{}{}{} \cventry{2009}{Articles de
+% vulgarisation mathématique et informatique}{}{}{}{} \newpage
+
+
+
+
+\section{Classical music}
+\begin{itemize}
+\item Guitar: since 1994
+\item Piano: self-learning since 2000
+\item Cello: since 2012
+\item Lyric sing: irregularly since 2004
+\end{itemize}
+\end{document}
