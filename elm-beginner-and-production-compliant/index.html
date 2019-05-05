@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Elm - beginner and production compliant</title>
+  <style>
+    @font-face {
+        font-family: 'Avenir';
+        src: url('fonts/AvenirNextLTPro-Cn.eot') format('eot'),
+             url('fonts/AvenirNextLTPro-Cn.otf') format('truetype'),
+             url('fonts/AvenirNextLTPro-Cn.woff') format('woff'),
+             url('fonts/AvenirNextLTPro-Cn.svg#') format('svg');
+        font-weight: 1000;
+        font-style: normal;
+    }
+
+    @font-face {
+        font-family: 'Bloomer';
+        src: url('fonts/BloomerDEMO-Regular.eot') format('eot'),
+             url('fonts/BloomerDEMO-Regular.otf') format('truetype'),
+             url('fonts/BloomerDEMO-Regular.woff') format('woff'),
+             url('fonts/BloomerDEMO-Regular.svg#') format('svg');
+        font-weight: 1000;
+        font-style: normal;
+    }
+
+    pre.elmsh {
+        padding: 10px;
+        margin: 0;
+        text-align: left;
+        overflow: auto;
+    }
+    code.elmsh {
+        padding: 0;
+    }
+    .elmsh-line:before {
+        content: attr(data-elmsh-lc);
+        display: inline-block;
+        text-align: right;
+        width: 40px;
+        padding: 0 20px 0 0;
+        opacity: 0.3;
+    }
+
+
+    .elmsh {color: #24292e;background: #ffffff;}.elmsh-hl {background: #fffbdd;}.elmsh-add {background: #eaffea;}.elmsh-del {background: #ffecec;}.elmsh-comm {color: #969896;}.elmsh1 {color: #005cc5;}.elmsh2 {color: #df5000;}.elmsh3 {color: #d73a49;}.elmsh4 {color: #0086b3;}.elmsh5 {color: #63a35c;}.elmsh6 {color: #005cc5;}.elmsh7 {color: #795da3;}
+  </style>
+</head>
+
+<body style="width: 100%;  margin: auto;">
+<div id="elm"></div>
+<script src="main.min.js"></script>
+
+<script>
+  var app = Elm.Main.init({
+    node: document.getElementById('elm'),
+    flags: location.href
+  });
+
+  // Inform app of browser navigation (the BACK and FORWARD buttons)
+  window.addEventListener('popstate', function () {
+      console.log("hi");
+      app.ports.onUrlChange.send(location.href);
+  });
+
+  // Change the URL upon request, inform app of the change.
+  app.ports.pushUrl.subscribe(function(url) {
+      history.pushState({}, '', url);
+      app.ports.onUrlChange.send(location.href);
+  });
+</script>
+</body>
+</html>
+
